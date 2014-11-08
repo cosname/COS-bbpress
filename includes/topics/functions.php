@@ -326,6 +326,20 @@ function bbp_new_topic_handler( $action = '' ) {
 	// Insert topic
 	$topic_id = wp_insert_post( $topic_data );
 
+    /* Change the value of post_name to topic_id
+
+       Follow the suggestion in
+       http://codex.wordpress.org/Function_Reference/wp_update_post
+       and
+       http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_insert_post_data
+
+       set_post_name_to_topic_id() is defined right after this function.
+                                                                    -- Yixuan
+    */
+	add_filter('wp_insert_post_data', 'set_post_name_to_topic_id', 99, 2);
+    wp_update_post( array('ID' => $topic_id) );
+    remove_filter('wp_insert_post_data', 'set_post_name_to_topic_id', 99);
+
 	/** No Errors *************************************************************/
 
 	if ( !empty( $topic_id ) && !is_wp_error( $topic_id ) ) {
@@ -427,6 +441,14 @@ function bbp_new_topic_handler( $action = '' ) {
 		$append_error = ( is_wp_error( $topic_id ) && $topic_id->get_error_message() ) ? $topic_id->get_error_message() . ' ' : '';
 		bbp_add_error( 'bbp_topic_error', __( '<strong>ERROR</strong>: The following problem(s) have been found with your topic:' . $append_error, 'bbpress' ) );
 	}
+}
+
+/* Function to set post_name to topic_id.
+   Used in bbp_new_topic_handler().    -- Yixuan
+*/
+function set_post_name_to_topic_id( $data, $postarr) {
+	$data['post_name'] = (string) $postarr['ID'];
+	return $data;
 }
 
 /**
