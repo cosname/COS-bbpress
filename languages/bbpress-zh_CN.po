@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: bbPress 2.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/bbpress\n"
 "POT-Creation-Date: 2014-01-11 18:30:39+00:00\n"
-"PO-Revision-Date: 2014-11-03 14:10-0500\n"
+"PO-Revision-Date: 2014-11-08 14:36-0500\n"
 "Last-Translator: Yixuan Qiu <yixuan.qiu@cos.name>\n"
 "Language-Team: COS <contact@cos.name>\n"
 "Language: zh_CN\n"
@@ -1336,7 +1336,7 @@ msgstr "论坛根目录短链接"
 
 #: includes/admin/settings.php:54
 msgid "Single Forum Slugs"
-msgstr "单项短链接"
+msgstr "单页短链接"
 
 #: includes/admin/settings.php:59
 msgid "Forum User Slugs"
@@ -1348,7 +1348,7 @@ msgstr ""
 
 #: includes/admin/settings.php:69
 msgid "Akismet Integration"
-msgstr ""
+msgstr "Akismet集成"
 
 #: includes/admin/settings.php:91
 msgid "Disallow editing after"
@@ -1596,11 +1596,11 @@ msgstr ""
 
 #: includes/admin/settings.php:1218
 msgid "Forum settings for Akismet"
-msgstr ""
+msgstr "针对Akismet的论坛设置"
 
 #: includes/admin/settings.php:1235
 msgid "Allow Akismet to actively prevent forum spam."
-msgstr ""
+msgstr "允许Akismet过滤论坛垃圾帖"
 
 #: includes/admin/settings.php:1258
 msgid "Forums Settings"
@@ -2775,7 +2775,7 @@ msgstr "您的"
 #: includes/common/template.php:2588
 msgctxt "User viewing another users profile"
 msgid "%s's"
-msgstr ""
+msgstr "%s的"
 
 #: includes/common/template.php:2593
 msgid "%s Topics"
@@ -3274,37 +3274,37 @@ msgstr ""
 #: includes/forums/functions.php:1602
 msgctxt "Open the forum"
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: includes/forums/functions.php:1603
 msgctxt "Close the forum"
 msgid "Closed"
-msgstr ""
+msgstr "关闭"
 
 #: includes/forums/functions.php:1616
 msgctxt "Forum accepts new topics"
 msgid "Forum"
-msgstr ""
+msgstr "版块"
 
 #: includes/forums/functions.php:1617
 msgctxt "Forum is a category"
 msgid "Category"
-msgstr ""
+msgstr "分类"
 
 #: includes/forums/functions.php:1630
 msgctxt "Make forum public"
 msgid "Public"
-msgstr ""
+msgstr "公开"
 
 #: includes/forums/functions.php:1631
 msgctxt "Make forum private"
 msgid "Private"
-msgstr ""
+msgstr "私有"
 
 #: includes/forums/functions.php:1632
 msgctxt "Make forum hidden"
 msgid "Hidden"
-msgstr ""
+msgstr "隐藏"
 
 #: includes/forums/template.php:51 includes/forums/template.php:55
 msgid "New Forum"
@@ -3634,7 +3634,7 @@ msgstr ""
 #: includes/replies/template.php:1210 includes/topics/template.php:1481
 #: includes/users/template.php:1651
 msgid "View %s's profile"
-msgstr ""
+msgstr "查看%s的档案"
 
 #: includes/replies/template.php:1210 includes/topics/template.php:1481
 #: includes/users/template.php:1651
@@ -3874,12 +3874,12 @@ msgstr ""
 #: includes/topics/functions.php:1965
 msgctxt "Open the topic"
 msgid "Open"
-msgstr "已打开"
+msgstr "打开"
 
 #: includes/topics/functions.php:1966
 msgctxt "Close the topic"
 msgid "Closed"
-msgstr "已关闭"
+msgstr "关闭"
 
 #: includes/topics/functions.php:1967
 msgctxt "Spam the topic"
@@ -4782,11 +4782,11 @@ msgstr "档案"
 
 #: templates/default/bbpress/user-details.php:35
 msgid "%s's Topics Started"
-msgstr ""
+msgstr "%s发起的主题"
 
 #: templates/default/bbpress/user-details.php:41
 msgid "%s's Replies Created"
-msgstr ""
+msgstr "%s创建的回复"
 
 #: templates/default/bbpress/user-details.php:48
 msgid "%s's Favorites"
