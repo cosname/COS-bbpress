@@ -144,7 +144,14 @@ add_filter( 'bbp_get_reply_content', 'wptexturize',        6    );
 add_filter( 'bbp_get_reply_content', 'convert_chars',      8    );
 add_filter( 'bbp_get_reply_content', 'capital_P_dangit',   10   );
 add_filter( 'bbp_get_reply_content', 'convert_smilies',    20   );
-add_filter( 'bbp_get_reply_content', 'force_balance_tags', 30   );
+/* We need to comment this out since it will convert
+       a <- 1
+   to
+       a < - 1
+   
+   -- Yixuan
+ */
+// add_filter( 'bbp_get_reply_content', 'force_balance_tags', 30   );
 add_filter( 'bbp_get_reply_content', 'wpautop',            40   );
 add_filter( 'bbp_get_reply_content', 'bbp_rel_nofollow',   50   );
 
@@ -155,7 +162,8 @@ add_filter( 'bbp_get_topic_content', 'wptexturize',        6    );
 add_filter( 'bbp_get_topic_content', 'convert_chars',      8    );
 add_filter( 'bbp_get_topic_content', 'capital_P_dangit',   10   );
 add_filter( 'bbp_get_topic_content', 'convert_smilies',    20   );
-add_filter( 'bbp_get_topic_content', 'force_balance_tags', 30   );
+/* Ditto    -- Yixuan */
+// add_filter( 'bbp_get_topic_content', 'force_balance_tags', 30   );
 add_filter( 'bbp_get_topic_content', 'wpautop',            40   );
 add_filter( 'bbp_get_topic_content', 'bbp_rel_nofollow',   50   );
 
