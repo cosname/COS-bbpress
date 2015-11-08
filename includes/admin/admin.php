@@ -149,11 +149,9 @@ class BBP_Admin {
 
 		/** Ajax **************************************************************/
 
-		add_action( 'wp_ajax_bbp_suggest_topic',        array( $this, 'suggest_topic' ) );
-		add_action( 'wp_ajax_nopriv_bbp_suggest_topic', array( $this, 'suggest_topic' ) );
-
-		add_action( 'wp_ajax_bbp_suggest_user',         array( $this, 'suggest_user'  ) );
-		add_action( 'wp_ajax_nopriv_bbp_suggest_user',  array( $this, 'suggest_user'  ) );
+		// No _nopriv_ equivalent - users must be logged in
+		add_action( 'wp_ajax_bbp_suggest_topic', array( $this, 'suggest_topic' ) );
+		add_action( 'wp_ajax_bbp_suggest_user',  array( $this, 'suggest_user'  ) );
 
 		/** Filters ***********************************************************/
 
@@ -509,12 +507,12 @@ class BBP_Admin {
 
 		// Settings page link
 		if ( current_user_can( 'bbp_settings_page' ) ) {
-			$new_links['settings'] = '<a href="' . add_query_arg( array( 'page' => 'bbpress'   ), admin_url( 'options-general.php' ) ) . '">' . esc_html__( 'Settings', 'bbpress' ) . '</a>';
+			$new_links['settings'] = '<a href="' . esc_url( add_query_arg( array( 'page' => 'bbpress'   ), admin_url( 'options-general.php' ) ) ) . '">' . esc_html__( 'Settings', 'bbpress' ) . '</a>';
 		}
 
 		// About page link
 		if ( current_user_can( 'bbp_about_page' ) ) {
-			$new_links['about']    = '<a href="' . add_query_arg( array( 'page' => 'bbp-about' ), admin_url( 'index.php'           ) ) . '">' . esc_html__( 'About',    'bbpress' ) . '</a>';
+			$new_links['about']    = '<a href="' . esc_url( add_query_arg( array( 'page' => 'bbp-about' ), admin_url( 'index.php'           ) ) ) . '">' . esc_html__( 'About',    'bbpress' ) . '</a>';
 		}
 
 		// Add a few links to the existing links array
@@ -540,9 +538,7 @@ class BBP_Admin {
 	 * @param WP_Admin_Bar $wp_admin_bar
 	 */
 	public function admin_bar_about_link( $wp_admin_bar ) {
-
 		if ( is_user_logged_in() ) {
-
 			$wp_admin_bar->add_menu( array(
 				'parent' => 'wp-logo',
 				'id'     => 'bbp-about',
