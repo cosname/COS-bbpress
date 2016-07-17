@@ -2073,7 +2073,6 @@ function bbp_get_super_stickies() {
  *                    and action
  * @uses bbp_get_forum_permalink() To get the forum link
  * @uses bbp_get_topic_permalink() To get the topic link
- * @uses add_query_arg() To add args to the url
  * @uses wp_safe_redirect() To redirect to the topic
  * @uses bbPress::errors:add() To log the error messages
  */
@@ -3444,7 +3443,7 @@ function bbp_display_topics_feed_rss2( $topics_query = array() ) {
 		return;
 
 	// Display the feed
-	header( 'Content-Type: ' . feed_content_type( 'rss-http' ) . '; charset=' . get_option( 'blog_charset' ), true );
+	header( 'Content-Type: ' . feed_content_type( 'rss2' ) . '; charset=' . get_option( 'blog_charset' ), true );
 	header( 'Status: 200 OK' );
 	echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>'; ?>
 

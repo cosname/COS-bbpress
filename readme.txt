@@ -2,10 +2,10 @@
 Contributors: matt, johnjamesjacoby, jmdodd, netweb
 Tags: forums, discussion, support, theme, akismet, multisite
 Requires at least: 3.6
-Tested up to: 4.3
-Stable tag: 2.5.8
+Tested up to: 4.5
+Stable tag: 2.5.10
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 bbPress is forum software, made the WordPress way.
 
@@ -39,6 +39,12 @@ We're keeping things as small and light as possible while still allowing for gre
 2. Adjust the CSS of your theme as needed, to make everything pretty.
 
 == Changelog ==
+
+= 2.5.10 =
+* Improved user display-name rendering
+
+= 2.5.9 =
+* Improved user mentions
 
 = 2.5.8 =
 * Improved ajax actions
